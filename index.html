@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeel Bhatt - Robotics Portfolio</title>
+    <style>
+        /* Basic body styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #333; /* Dark text color for contrast */
+        }
+
+        /* Header styles for the profile picture and title */
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #343a40; /* Dark background for header */
+            color: white; /* White text for contrast */
+        }
+
+        /* Profile picture styling */
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Circular profile picture */
+            margin-bottom: 1rem;
+        }
+
+        /* General section styling */
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 1200px; /* Centralized content */
+            background-color: white;
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        /* Section headings */
+        h2 {
+            border-bottom: 2px solid #e9ecef; /* Light border for separation */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            color: #007bff; /* Blue color for emphasis */
+        }
+
+        /* Flexbox styles for cards in sections */
+        .experience, .projects, .blogs, .research {
+            display: flex;
+            flex-wrap: wrap; /* Adjust layout on smaller screens */
+            gap: 1rem; /* Space between cards */
+        }
+
+        /* Card container styling */
+        .card {
+            flex: 1 1 calc(33.333% - 2rem); /* Responsive layout */
+            border: 1px solid #e9ecef; /* Light border */
+            border-radius: 8px;
+            overflow: hidden; /* Ensures content stays within card */
+            background-color: #fff; /* White background for cards */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: transform 0.2s; /* Smooth hover effect */
+        }
+
+        /* Scale effect on hover */
+        .card:hover {
+            transform: scale(1.02); /* Slight enlargement */
+        }
+
+        /* Image styles within cards */
+        .card img {
+            width: 100%;
+            height: 200px; /* Fixed height for uniformity */
+            object-fit: cover; /* Ensure full coverage */
+        }
+
+        /* Card content area styling */
+        .card-content {
+            padding: 1rem;
+        }
+
+        /* Card title styling */
+        .card-content h3 {
+            margin: 0.5rem 0;
+            color: #333; /* Dark title text */
+        }
+
+        /* Card paragraph text */
+        .card-content p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem; /* Slightly smaller text */
+            color: #666; /* Gray color for readability */
+        }
+
+        /* Link styling in cards */
+        .card-content a {
+            text-decoration: none; /* Remove underline */
+            color: #007bff; /* Blue link color */
+            font-weight: bold;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #343a40; /* Dark footer background */
+            color: white; /* White footer text */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section with profile picture and introduction -->
+    <header>
+        <img src="images/profile.jpg" alt="Profile Picture">
+        <h1>Zeel Bhatt</h1>
+        <p>Robotics and Computer Vision Enthusiast</p>
+    </header>
+
+    <!-- About Me section -->
+    <section>
+        <h2>About Me</h2>
+        <p>I am an MS Robotics graduate from Arizona State University with expertise in 3D vision, robotics, and AI. My passion lies in deploying perception algorithms and solving complex localization problems through custom neural networks and optimization techniques.</p>
+    </section>
+
+    <!-- Experience section -->
+    <section>
+        <h2>Experience</h2>
+        <div class="experience">
+            <!-- Individual experience cards -->
+            <div class="card">
+                <div class="card-content">
+                    <h3>Active Perception Group</h3>
+                    <p>Designed supervised contrastive regression loss for visual pose estimation achieving 0.76 cm translational accuracy on KITTI dataset.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Packizon</h3>
+                    <p>Developed a highly accurate RGBD camera-based box-dimensioning system optimizing trucking efficiency, saving $1000 daily.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>RRC</h3>
+                    <p>Performed semantic segmentation of LiDAR point cloud data with 92% IoU using PointNet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects section -->
+    <section>
+        <h2>Projects</h2>
+        <div class="projects">
+            <!-- Individual project cards -->
+            <div class="card">
+                <img src="images/ezgif.gif" alt="SLAM Project">
+                <div class="card-content">
+                    <h3>SLAM Mission</h3>
+                    <p>Created 3D point maps using ORB-SLAM and optical flow for autonomous landing on a moving rover.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/latent_space_diff.png" alt="Learning to Localize">
+                <div class="card-content">
+                    <h3>Learning to Localize</h3>
+                    <p>A self-supervised approach to visual localization using contrastive loss for SE(3) pose estimation.</p>
+                    <a href="https://zeelbhatt.github.io/Learning-from-Motion.github.io/">View Code</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/building.png" alt="Bundle Adjustment">
+                <div class="card-content">
+                    <h3>Bundle Adjustment</h3>
+                    <p>Implemented camera calibration and bundle adjustment using C++ and Ceres Library.</p>
+                    <a href="https://github.com/zeelbhatt/bundle_adjustment.github.io">View Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs section -->
+    <section>
+        <h2>Blogs</h2>
+        <div class="blogs">
+            <!-- Individual blog cards -->
+            <div class="card">
+                <img src="images/fft2.png" alt="Image Fourier Transform Blog">
+                <div class="card-content">
+                    <h3>Image Fourier Transform</h3>
+                    <a href="https://zeelbhatt.github.io/image-fourier-transform.github.io/">Read Blog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research section -->
+    <section>
+        <h2>Research</h2>
+        <div class="research">
+            <!-- Individual research cards -->
+            <div class="card">
+                <img src="images/lfm_main.png" alt="LfM Research">
+                <div class="card-content">
+                    <h3>Learning from Motion (LfM)</h3>
+                    <p>A self-supervised approach for visual localization using contrastive loss and optical flow.</p>
+                    <a href="https://zeelbhatt.github.io/Learning-from-Motion.github.io/">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Zeel Bhatt | Robotics & Computer Vision</p>
+    </footer>
+</body>
+</html>
+
